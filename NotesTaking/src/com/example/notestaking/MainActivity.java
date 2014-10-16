@@ -20,8 +20,13 @@ public class MainActivity extends Activity {
 		datasource = new NotesDataSource(this);
 		List<NoteItem> notes = datasource.findAll();
 		NoteItem note = notes.get(0);
-		 datasource.update(note);
-		Log.i("Notes", note.getKey());
+		note.setText("Updated");
+		datasource.update(note);
+		
+	    notes =datasource.findAll();
+		note = notes.get(0);
+				 
+		Log.i("Notes", note.getKey()+ " : " + note.getText());
 		
 	
 	}
