@@ -22,7 +22,7 @@ public class NoteItem {
 		this.text = text;
 	}
 	
-	@SuppressLint("SimpleDateFormat")
+	@SuppressLint("SimpleDateFormat") 
 	public static NoteItem getNew(){
 		Locale locale = new Locale("en_US");
 		Locale.setDefault(locale);
