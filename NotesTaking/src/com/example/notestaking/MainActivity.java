@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		datasource = new NotesDataSource();
+		datasource = new NotesDataSource(this);
 		List<NoteItem> notes = datasource.findAll();
 		NoteItem note = notes.get(0);
 		 
