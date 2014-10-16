@@ -6,11 +6,11 @@ import com.example.notestaking.data.NoteItem;
 import com.example.notestaking.data.NotesDataSource;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.app.ListActivity;
 import android.util.Log;
 import android.view.Menu;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ListActivity {
 	private NotesDataSource datasource;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
