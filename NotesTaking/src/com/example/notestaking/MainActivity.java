@@ -9,26 +9,31 @@ import android.os.Bundle;
 import android.app.ListActivity;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity {
 	private NotesDataSource datasource;
+	List<NoteItem> notesList;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
 		datasource = new NotesDataSource(this);	
-		List<NoteItem> notes = datasource.findAll();//find all notes in preferences
-		NoteItem note = notes.get(0);	//get first note
-		note.setText("Updated");		//update note
-		datasource.update(note);	
 		
-	    notes =datasource.findAll();  
-		note = notes.get(0);
-				 
-		Log.i("Notes", note.getKey()+ " : " + note.getText());
+		refreshDisplay();
 		
 	
+	}
+
+	private void refreshDisplay() {
+		
+		notesList = datasource.findAll();
+		ArrayAdapter<NoteItem> adapter =
+				new ArrayAdapter<NoteItem>(this, android.R.layout.simple_list_item_1,notesList);
+		setListAdapter(adapter);
+		
 	}
 
 	@Override
