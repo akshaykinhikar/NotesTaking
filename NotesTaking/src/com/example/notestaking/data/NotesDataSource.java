@@ -13,5 +13,13 @@ public class NotesDataSource {
 		return notelist;
 	}
 	
-	
+	public boolean update(NoteItem note){
+		return true;
+	}
+
+
+	public boolean remove(NoteItem note){
+		return true;
+	}
+
 }
