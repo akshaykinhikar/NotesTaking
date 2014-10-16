@@ -17,13 +17,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		datasource = new NotesDataSource(this);
-		List<NoteItem> notes = datasource.findAll();
-		NoteItem note = notes.get(0);
-		note.setText("Updated");
-		datasource.update(note);
+		datasource = new NotesDataSource(this);	
+		List<NoteItem> notes = datasource.findAll();//find all notes in preferences
+		NoteItem note = notes.get(0);	//get first note
+		note.setText("Updated");		//update note
+		datasource.update(note);	
 		
-	    notes =datasource.findAll();
+	    notes =datasource.findAll();  
 		note = notes.get(0);
 				 
 		Log.i("Notes", note.getKey()+ " : " + note.getText());
