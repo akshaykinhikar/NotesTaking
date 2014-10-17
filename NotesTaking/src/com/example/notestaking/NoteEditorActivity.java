@@ -38,11 +38,9 @@ public class NoteEditorActivity extends Activity {
 		intent.putExtra("text", noteText); //User data
 		setResult(RESULT_OK, intent); //feedback for mainActivity
 		finish();
-		
-		
-		
 	}
 
+	//launcher Icon --> backButton
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
@@ -50,4 +48,11 @@ public class NoteEditorActivity extends Activity {
 		}
 		return false;
 	}
+	
+//	For Device back button Pressed
+	@Override
+	public void onBackPressed() {
+		saveAndFinish();
+	}
+	
 }

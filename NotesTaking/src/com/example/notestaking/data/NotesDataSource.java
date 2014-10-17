@@ -36,6 +36,7 @@ public class NotesDataSource {
 	}
 	
 	public boolean update(NoteItem note){
+		
 		SharedPreferences.Editor editor = notePrefs.edit();
 		editor.putString(note.getKey(), note.getText());
 		editor.commit();
@@ -48,9 +49,7 @@ public class NotesDataSource {
 			SharedPreferences.Editor editor = notePrefs.edit();
 			editor.remove(note.getKey());
 			editor.commit();
-			
 		}
-		
 		return true;
 	}
 
