@@ -1,5 +1,9 @@
 package com.example.notestaking;
 
+<<<<<<< HEAD
+public class NoteEditorActivity {
+
+=======
 import com.example.notestaking.data.NoteItem;
 
 import android.app.Activity;
@@ -25,4 +29,5 @@ public class NoteEditorActivity extends Activity {
 		et.setSelection(note.getText().length());
 		
 	}
+>>>>>>> 847ada3
 }
