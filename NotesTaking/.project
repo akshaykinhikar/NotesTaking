@@ -3,6 +3,7 @@
 	<name>NotesTaking</name>
 	<comment></comment>
 	<projects>
+		<project>actionbarsherlock</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -34,10 +34,7 @@ public class MainActivity extends ListActivity {
 		
 		registerForContextMenu(getListView());
 		datasource = new NotesDataSource(this);	
-
-		
 		refreshDisplay();
-
 	}
 
 	private void refreshDisplay() {

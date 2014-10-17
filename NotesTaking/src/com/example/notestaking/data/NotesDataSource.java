@@ -6,9 +6,11 @@ import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+@SuppressLint("NewApi")
 public class NotesDataSource {
 	private static final String PREFKEY = "notes";
 	private SharedPreferences notePrefs;
@@ -39,7 +41,8 @@ public class NotesDataSource {
 		
 		SharedPreferences.Editor editor = notePrefs.edit();
 		editor.putString(note.getKey(), note.getText());
-		editor.commit();
+		//editor.commit();
+		editor.apply();
 		return true;
 	}
 
