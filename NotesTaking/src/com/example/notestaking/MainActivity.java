@@ -22,8 +22,6 @@ public class MainActivity extends ListActivity {
 	private static final int Menu_Delete_Id = 1002;
 	private int currentNoteId;
 	
-	
-	
 	private NotesDataSource datasource;
 	List<NoteItem> notesList;
 

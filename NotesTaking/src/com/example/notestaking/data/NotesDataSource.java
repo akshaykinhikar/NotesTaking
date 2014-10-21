@@ -41,8 +41,8 @@ public class NotesDataSource {
 		
 		SharedPreferences.Editor editor = notePrefs.edit();
 		editor.putString(note.getKey(), note.getText());
-		//editor.commit();
-		editor.apply();
+		editor.commit();
+		//editor.apply();
 		return true;
 	}
 
