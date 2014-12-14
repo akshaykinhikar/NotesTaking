@@ -28,4 +28,6 @@ proguard/
 #Ignoring .classpath
 *.classpath
 
+NotesTaking/project.properties
+
 
